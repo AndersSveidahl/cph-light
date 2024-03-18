@@ -1,0 +1,90 @@
+---
+
+---
+
+<div class="container">
+    <input type="checkbox" id="check">
+    <label for="check" class="button"></label>
+    <img src="../public/top.png" alt="" class="pictures picture-1">
+    <img src="../public/mid.png" alt="" class="pictures picture-2">
+    <img src="../public/bottom.png" alt="" class="pictures picture-3">
+</div>
+
+
+<style>
+    @media (max-width: 800px) {
+        .container {
+            display: none!important;
+        }
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .button {
+        background: #d2d2d2;
+        width: 52px;
+        height: 30px;
+        border-radius: 100px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .button::before {
+        position: absolute;
+        content: "";
+        background: #fff;
+        width: 24px;
+        height: 24px;
+        border-radius: 100px;
+        margin: 3px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    input:checked + .button {
+        background: #4444f1;
+    }
+
+    .pictures {
+        display: none;
+    }
+
+    input:checked ~ .pictures {
+        display: block !important;;
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+        opacity: 0.6;
+        z-index: -1;
+    }
+
+    .picture-1 {
+        top: -100px;
+        left: 0;
+    }
+
+    .picture-2 {
+        top: 100px;
+        left: 0;
+    }
+
+    .picture-3 {
+        top: 600px;
+        left: 0;
+    }
+
+
+    input:checked + .button::before {
+        transform: translateX(22px);
+    }
+
+    input{
+        display: none;
+    }
+
+</style>
+
+<script>
+
+</script>
