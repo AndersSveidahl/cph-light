@@ -34,12 +34,16 @@
     .button::before {
         position: absolute;
         content: "";
-        background: #fff;
+        background: #fff url("../../public/moon.png") no-repeat 5px 5px;
         width: 24px;
         height: 24px;
         border-radius: 100px;
         margin: 3px;
         transition: all 0.3s ease-in-out;
+    }
+
+    input:checked + .button::before {
+        background: #fff url("../../public/sun.png") no-repeat 5px 5px;
     }
 
     input:checked + .button {
@@ -61,7 +65,7 @@
 
     .picture-1 {
         top: -100px;
-        left: 0;
+        left: 400px;
     }
 
     .picture-2 {
@@ -86,5 +90,15 @@
 </style>
 
 <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const body = document.getElementsByTagName('body')[0];
+    const button = document.querySelector(".button");
+
+        button.addEventListener("click", function () {
+            body.classList.toggle("her")
+        });
+    });
+
 
 </script>
