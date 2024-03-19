@@ -10,9 +10,12 @@ const {variant, size} = Astro.props
     button {
         padding: 10px 20px;
         border-radius: 32px;
-        border: 1px solid white;
+        border: 1px solid transparent;
+        cursor: pointer;
     }
-
+    button:hover {
+        opacity: 0.6;
+    }
     .primary{
         background-color: black;
         color: white;

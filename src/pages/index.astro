@@ -1,6 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayouts.astro"
 import Slider from "../components/Slider.astro"
+import Card from "../components/Card.astro"
+import Search from "../components/Search.astro"
 import Timer from "../components/Timer.astro"
 import Button from "../components/Button.astro"
 
@@ -20,18 +22,27 @@ console.log(data);
     
 
 
-<MainLayout title="Forside">
-    <h1>Her</h1>
-    <h1>Her</h1>
-    <h1>Her</h1>
-    <h1>Her</h1>
-    <h1>Her</h1>
-    <h1>Her</h1>
-    <h1>Her</h1>
-    <h1>Her</h1>
+<MainLayout>
+    <div class="hero">
+        <video autoplay src="../public/hero-video.mp4"></video>
+    </div>
+    <Search/>
+    <Card/>
     <Slider/>
     <Timer/>
 	<Button variant="primary" size="small">TILBAGE</Button>
-	<Button variant="secondary" size="small">INDSEND</Button>
 </MainLayout>
 
+
+<style>
+    .hero {
+        margin-left: -80px;
+        margin-right: -80px;
+        margin-top: -150px;
+        position: relative;
+    }
+    .hero video {
+        width: 100%;
+        height: auto;
+    }
+</style>

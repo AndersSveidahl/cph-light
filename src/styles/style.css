@@ -6,9 +6,9 @@
 
 body {
   background: #000;
-  overflow: hidden;
+  overflow-y: auto;
   font-family: "Montserrat", sans-serif;
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -21,18 +21,34 @@ p {
   color: #fff;
 }
 
-body.her .social-icons a {
+body.light .social-icons a {
   box-shadow: 0px 0px 36px 2px #1caada;
 }
 
-body.her a.dropdown-btn {
+body.light a.dropdown-btn {
   box-shadow: 0px 0px 36px 2px #1caada;
 }
 
-body.her .timer {
+.pictures {
+  display: none;
+}
+
+body.light .pictures {
+  display: block;
+}
+
+body.light .timer {
   box-shadow: 0px 0px 36px 2px #1caada;
 }
 
-body.her .dropdown-content {
+body.light .dropdown-content {
+  box-shadow: 0px 0px 36px 2px #1caada;
+}
+
+body.light Button {
+  box-shadow: 0px 0px 36px 2px #1caada;
+}
+
+body.light .search {
   box-shadow: 0px 0px 36px 2px #1caada;
 }

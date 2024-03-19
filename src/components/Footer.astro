@@ -1,11 +1,11 @@
 ---
-
+import Button from "../components/Button.astro"
 ---
 <footer>
     <div class="nyhedsbrev">
         <h3>Tilmeld dig nyhedsbrev</h3>
         <input type="text" name="" id="">
-        <button>Indsend</button>
+        <Button variant="secondary" size="small">INDSEND</Button>
     </div>
 
     <div class="social-icons">
@@ -35,6 +35,11 @@
         grid-template-columns: repeat(2, 1fr);
         z-index: 100;
         position: relative;
+        padding: 40px 0;
+    }
+
+    footer input {
+        padding: 10px;
     }
 
     footer h3 {
