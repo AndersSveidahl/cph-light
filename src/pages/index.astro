@@ -1,31 +1,33 @@
 ---
 import MainLayout from "../layouts/MainLayouts.astro"
 import Slider from "../components/Slider.astro"
-import Timer from "../components/Timer.astro"
-import Button from "../components/Button.astro";
+
+
+const data = await fetch("https://atnoitojtayusrgbugei.supabase.co/rest/v1/Cph-light", 
+{
+    method:"GET",
+    headers:{
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF0bm9pdG9qdGF5dXNyZ2J1Z2VpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA4NTExNzQsImV4cCI6MjAyNjQyNzE3NH0.QnBMhB7JashNJqepGs9_JjfdNY6c3s6GMhaoFRa52NA" 
+ 
+    }
+}).then(res=>res.json());
+
+console.log(data);
+
 ---
 
+    
 
-<MainLayout title="Copenhagen Light Festival">
-    <div class="hero">
-        <video src="../public/hero-video.mp4"></video>
-    </div>
+
+<MainLayout title="Forside">
     <Slider/>
     <Timer/>
 	<Button variant="primary" size="small">TILBAGE</Button>
 	<Button variant="secondary" size="small">INDSEND</Button>
 </MainLayout>
 
-<style>
-    .hero video {
-        width: 100%;
-        height: auto;
-    }
-</style>
-
-    
 
 
-
-	
-
+https://atnoitojtayusrgbugei.supabase.co/rest/v1/Cph-light
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF0bm9pdG9qdGF5dXNyZ2J1Z2VpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA4NTExNzQsImV4cCI6MjAyNjQyNzE3NH0.QnBMhB7JashNJqepGs9_JjfdNY6c3s6GMhaoFRa52NA 
+          
