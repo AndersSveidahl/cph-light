@@ -1,17 +1,19 @@
 ---
-
 import MainLayout from "../layouts/MainLayouts.astro"
 import Slider from "../components/Slider.astro"
 import Timer from "../components/Timer.astro"
+import Button from "../components/Button.astro";
 ---
 
 
-<MainLayout title="Forside">
+<MainLayout title="Copenhagen Light Festival">
     <div class="hero">
         <video src="../public/hero-video.mp4"></video>
     </div>
     <Slider/>
     <Timer/>
+	<Button variant="primary" size="small">TILBAGE</Button>
+	<Button variant="secondary" size="small">INDSEND</Button>
 </MainLayout>
 
 <style>
@@ -22,3 +24,8 @@ import Timer from "../components/Timer.astro"
 </style>
 
     
+
+
+
+	
+
