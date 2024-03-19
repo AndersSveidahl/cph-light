@@ -1,8 +1,24 @@
 ---
-import MainLayout from "../layouts/MainLayouts.astro"
 
+import MainLayout from "../layouts/MainLayouts.astro"
+import Slider from "../components/Slider.astro"
+import Timer from "../components/Timer.astro"
 ---
 
 
-<MainLayout title="Forside">	
+<MainLayout title="Forside">
+    <div class="hero">
+        <video src="../public/hero-video.mp4"></video>
+    </div>
+    <Slider/>
+    <Timer/>
 </MainLayout>
+
+<style>
+    .hero video {
+        width: 100%;
+        height: auto;
+    }
+</style>
+
+    
