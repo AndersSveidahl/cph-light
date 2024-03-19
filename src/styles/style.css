@@ -17,3 +17,7 @@ h1 {
 p {
   color: #fff;
 }
+
+body.her .social-icons a {
+  background-color: red;
+}
