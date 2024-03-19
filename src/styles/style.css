@@ -1,6 +1,13 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/montserrat-variablefont_wght-webfont.woff2") format("woff2");
+  src: url("fonts/montserrat-variablefont_wght-webfont.woff") format("woff");
+}
+
 body {
   background: #000;
   overflow: hidden;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -9,4 +16,8 @@ h1 {
 
 p {
   color: #fff;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
 }
