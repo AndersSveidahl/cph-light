@@ -1,26 +1,24 @@
 ---
 import MainLayout from "../layouts/MainLayouts.astro"
 import Slider from "../components/Slider.astro"
+import Timer from "../components/Timer.astro"
 
 
 ---
 
     
 
-
-<MainLayout title="Forside">
-    <Slider/>
-    <div class="box-shadow">
-        <h1>Her kommer timer</h1>
+<MainLayout>
+    <div class="hero">
+        <video src="../public/hero-video.mp4"></video>
     </div>
-
-    <style>
-        .box-shadow {
-            padding: 30px;
-            display: inline-block;
-            margin: 30px;
-            box-shadow: -2px 3px 52px 21px rgba(255,255,255,1);
-        }
-    </style>
-
+    <Slider/>
+    <Timer/>
 </MainLayout>
+
+<style>
+    .hero video {
+        width: 100%;
+        height: auto;
+    }
+</style>
