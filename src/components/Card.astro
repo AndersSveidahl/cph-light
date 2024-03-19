@@ -1,0 +1,103 @@
+---
+
+---
+
+
+   
+
+<div class="card">
+    <img class="card-image" src="../public/test.png" alt="">
+</div>
+
+<div class="card-wrapper">
+    <div class="overlay"></div>
+    <div class="info">
+        <span class="close-btn">&times;</span>
+        <div class="info-wrapper">
+            <h1>Overskrift her</h1>
+            <p>Description her</p>
+        </div>
+        <img class="info-image" src="../public/test.png" alt="">
+    </div>
+</div>
+
+<style>
+    body {
+        position: relative;
+    }
+
+    .card {
+        position: relative;
+        height: 320px;
+        width: 400px;
+        border-radius: 16px;
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 50;
+    }
+
+    .card-image {
+        height: auto;
+        width: 100%;
+        /* position: absolute; */
+    }
+
+    .info-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-wrapper {
+        display: none;
+    }
+
+    .card-wrapper.active {
+        display: block;
+    }
+
+    .info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: fixed;
+        padding: 30px;
+        background-color: red;
+        max-width: 800px;
+        top: 21%;
+        left: 15%;
+        right: 0;
+        text-align: center;
+        z-index: 100;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        z-index: 200;
+        background: blue;
+        padding: 5.3px 10px;
+        border-radius: 100px;
+        color: white;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const card = document.querySelector(".card");
+        const cardWrapper = document.querySelector(".card-wrapper");
+        const info = document.querySelector(".info");
+        const closeBtn = document.querySelector(".close-btn");
+
+        card.addEventListener("click", function () {
+            cardWrapper.classList.toggle("active");
+        });
+
+        closeBtn.addEventListener("click", function () {
+            cardWrapper.classList.remove("active");
+        });
+    });
+</script>
+
+</body>
+</html>
