@@ -13,9 +13,12 @@ const { data } = Astro.props;
         <span class="close-btn">&times;</span>
         <div class="info-wrapper">
             <h1>{data.titel}</h1>
+            <h3>{data.kunstner}</h3>
             <p>{data.beskrivelse}</p>
+            <img src={data.img} alt="">
+            
         </div>
-        <img class="info-image" src="../public/test.png" alt="">
+     
     </div>
 </div>
 
