@@ -5,9 +5,9 @@
 <div class="container">
     <input type="checkbox" id="check">
     <label for="check" class="button"></label>
-    <img src="../public/top.svg" alt="" class="pictures picture-1">
-    <img src="../public/mid.svg" alt="" class="pictures picture-2">
-    <img src="../public/bottom.svg" alt="" class="pictures picture-3">
+    <img src="/top.svg" alt="" class="pictures picture-1">
+    <img src="/mid.svg" alt="" class="pictures picture-2">
+    <img src="/bottom.svg" alt="" class="pictures picture-3">
 </div>
 
 
@@ -34,7 +34,7 @@
     .button::before {
         position: absolute;
         content: "";
-        background: #fff url("../../public/moon.png") no-repeat 5px 5px;
+        background: #fff url("..//moon.png") no-repeat 5px 5px;
         width: 24px;
         height: 24px;
         border-radius: 100px;
@@ -43,7 +43,7 @@
     }
 
     input:checked + .button::before {
-        background: #fff url("../../public/sun.png") no-repeat 5px 5px;
+        background: #fff url("..//sun.png") no-repeat 5px 5px;
     }
 
     input:checked + .button {
