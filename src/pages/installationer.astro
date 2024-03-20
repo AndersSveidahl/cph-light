@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayouts.astro"
 import Card from "../components/Card.astro"
-
+import Search from "../components/Search.astro"
 const data = await fetch("https://atnoitojtayusrgbugei.supabase.co/rest/v1/Cph-light", 
 {
     method:"GET",
@@ -21,5 +21,5 @@ const data = await fetch("https://atnoitojtayusrgbugei.supabase.co/rest/v1/Cph-l
 	{data.map(installation=>{
 		return <Card data={installation}/>  ;
 	})}
-	
+	 <Search/>
 </MainLayout>
