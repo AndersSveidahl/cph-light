@@ -2,9 +2,6 @@
 
 ---
 
-
-   
-
 <div class="card">
     <img class="card-image" src="../public/test.png" alt="">
 </div>
@@ -60,7 +57,11 @@
         grid-template-columns: repeat(2, 1fr);
         position: absolute;
         padding: 30px;
-        background-color: red;
+      background: rgba(255, 255, 255, 0.12);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.8px);
+-webkit-backdrop-filter: blur(7.8px);
+border-radius: 32px;
         max-width: 800px;
         top: 40%;
         left: 15%;
@@ -75,7 +76,7 @@
         right: 10px;
         cursor: pointer;
         z-index: 200;
-        background: blue;
+        background: transparent;
         padding: 5.3px 10px;
         border-radius: 100px;
         color: white;
