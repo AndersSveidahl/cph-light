@@ -85,7 +85,7 @@ import Toggle from "../components/ToggleBtn.astro"
         
     header {
         display: flex;
-        z-index: 100;
+        z-index: 1000;
         padding-top: 20px;
         position: relative;
     }
@@ -179,16 +179,16 @@ import Toggle from "../components/ToggleBtn.astro"
         display: none;
         position: absolute;
         min-width: 160px;
-        z-index: 1;
+        z-index: 100;
         border: 1px solid transparent;
         left: -5px;
         padding: 10px !important;
         border-radius: 32px;
         margin-top: 10px !important;
-background: rgba(255, 255, 255, 0.12);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(7.8px);
--webkit-backdrop-filter: blur(7.8px);
+        background: rgba(255, 255, 255, 0.12);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.8px);
+        -webkit-backdrop-filter: blur(7.8px);
       }
     }
 
