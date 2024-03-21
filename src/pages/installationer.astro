@@ -13,11 +13,10 @@ const data = await fetch("https://atnoitojtayusrgbugei.supabase.co/rest/v1/Cph-l
 
 ---
 
-<MainLayout title="Installationer">
+<MainLayout>
 	<Search/>
-<section class="installationer">
-	{data.map(installation=>{
-		return <Card data={installation}/>  ;
-	})}
-	 
+    <section class="installationer">
+        {data.map(installation=>{
+            return <Card data={installation}/>  ;
+        })}
 </MainLayout>
