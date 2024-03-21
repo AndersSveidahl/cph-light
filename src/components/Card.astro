@@ -10,7 +10,7 @@ const { data } = Astro.props;
 <div class="card-wrapper">
     <div class="overlay"></div>
     <div class="info">
-        <span class="close-btn">&times;</span>
+        <span class="close-btn">x</span>
         <div class="info-wrapper">
             <h1>{data.titel}</h1>
             <h3>{data.kunstner}</h3>
@@ -34,6 +34,7 @@ const { data } = Astro.props;
         cursor: pointer;
         z-index: 100;
         margin: 20px 0;
+        
     }
 
     .card img {
@@ -56,10 +57,19 @@ const { data } = Astro.props;
 
     .card-wrapper {
         display: none;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        z-index: 1000; /* Higher z-index to overlay everything */
     }
 
     .card-wrapper.active {
-        display: block;
+        display: flex;
     }
 
     .info {
@@ -73,11 +83,7 @@ const { data } = Astro.props;
         -webkit-backdrop-filter: blur(7.8px);
         border-radius: 32px;
         max-width: 800px;
-        top: 40%;
-        left: 15%;
-        right: 0;
         text-align: center;
-        z-index: 110;
         gap: 20px;
         max-width: 1000px;
     }
@@ -92,28 +98,30 @@ const { data } = Astro.props;
         padding: 5.3px 10px;
         border-radius: 100px;
         color: white;
+        font-size: 40px;
     }
 </style>
 
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const card = document.querySelector(".card");
-        const cardWrapper = document.querySelector(".card-wrapper");
-        const info = document.querySelector(".info");
-        const closeBtn = document.querySelector(".close-btn");
+        const cards = document.querySelectorAll(".card");
+        const cardWrappers = document.querySelectorAll(".card-wrapper");
+        const closeBtns = document.querySelectorAll(".close-btn");
 
-        card.addEventListener("click", function () {
-            cardWrapper.classList.toggle("active");
+        cards.forEach((card, index) => {
+            card.addEventListener("click", function () {
+                cardWrappers[index].classList.toggle("active");
+            });
         });
 
-        closeBtn.addEventListener("click", function () {
-            cardWrapper.classList.remove("active");
+        closeBtns.forEach((closeBtn, index) => {
+            closeBtn.addEventListener("click", function () {
+                cardWrappers[index].classList.remove("active");
+            });
         });
     });
-    function closePopup() {
-  const modal = document.getElementById("card");
-  modal.style.display = "none";
-}
-</script>
 
+
+</script>
 
